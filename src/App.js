@@ -1,23 +1,19 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Home from './components/Home';
-import BlockDetails from './components/BlockDetails';
-import TransactionDetails from './components/TransactionDetails';
-import AppNavbar from './components/Navbar';
+import Navbar from './components/Navbar';
+import Home from './pages/Home';
+import BlockDetails from './pages/BlockDetails';
+import TransactionDetails from './pages/TransactionDetails';
 
-const App = () => {
-    return (
-        <Router>
-            <div>
-                <AppNavbar />
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/block/:hash" element={<BlockDetails />} />
-                    <Route path="/block/:hash/transactions" element={<TransactionDetails />} />
-                </Routes>
-            </div>
-        </Router>
-    );
-}
+const App = () => (
+    <Router>
+        <Navbar />
+        <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/block/:hash" element={<BlockDetails />} />
+            <Route path="/block/:blockHash/transaction/:transactionId" element={<TransactionDetails />} />
+        </Routes>
+    </Router>
+);
 
 export default App;
