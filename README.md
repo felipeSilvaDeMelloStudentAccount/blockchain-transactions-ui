@@ -1,6 +1,10 @@
-# Getting Started with Create React App
+# Getting Started with Blockchain View React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+```bash`
+
+git clone <repository-url>
+cd frontend
+
 
 ## Available Scripts
 
